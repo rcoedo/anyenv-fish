@@ -1,7 +1,8 @@
 if test -e $HOME/.anyenv
   set -gx ANYENV_ROOT $HOME/.anyenv
   set -gx PATH $ANYENV_ROOT/bin $PATH
-  status --is-interactive; and source (anyenv init -|psub)
+  source (anyenv init -|psub)
+  # status --is-interactive; and source (anyenv init -|psub)
 else
     echo ~/.anyenv dir not found.\nYou can run 'git clone https://github.com/riywo/anyenv ~/.anyenv' to install it.
 
